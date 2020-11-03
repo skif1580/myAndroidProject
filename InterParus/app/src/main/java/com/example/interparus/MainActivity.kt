@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         initWebView()
     }
-    val ex =object : RuntimeException("Test"){}
+
     @RequiresApi(Build.VERSION_CODES.O)
     private fun initWebView() {
         webView = findViewById<WebView>(R.id.wb_main_activity)
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         webView.webViewClient = WebViewClient()
         webView.loadUrl("https://interparus.com/")
     }
-
+    
     override fun onBackPressed() {
         if (webView.canGoBack()) {
             webView.goBack()
